@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KCIS - Qingshan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="index">
+    <audio autoplay loop id="audioelement" src="audio/007.mp3"></audio>
+
+    <img src="imgs/bg-school.png" alt="" class="bg-school">
+    <img src="imgs/bg-text1.png" alt="" class="bg-txt1">
+    <img src="imgs/bg-text2.png" alt="" class="bg-txt2">
+    <img src="imgs/bg-text3.png" alt="" class="bg-txt3">
+
+    
+    <a href="web/photos.html" class="hover btn-photos">
+        <img src="imgs/btn-photosA.png" alt="" class="a">
+        <img src="imgs/btn-photosB.png" alt="" class="b">
+    </a>
+    <a href="web/videos.html" class="hover btn-videos">
+        <img src="imgs/btn-videosA.png" alt="" class="a">
+        <img src="imgs/btn-videosB.png" alt="" class="b">
+    </a>
+
+
+
+    <script type="text/javascript">
+        window.onload = function () {
+            setInterval("toggleSound()", 1);
+        }
+        function toggleSound() {
+            var music = document.getElementById("audioelement");//獲取ID  
+            if (music.paused) { //判讀是否播放  
+                music.paused = false;
+                music.play(); //沒有就播放 
+            }
+        }
+    </script>
+    <script src="all.js"></script>
+</body>
+</html>
